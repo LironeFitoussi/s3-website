@@ -22,7 +22,7 @@ jobs:
 
       - name: Sync Files to S3
         run: |
-          aws s3 sync ./src s3://${{ secrets.AWS_S3_BUCKET_NAME }} --delete
+          aws s3 sync ./src s3://${{ secrets.AWS_S3_BUCKET_NAME }}/src --delete
 
       - name: Create CloudFront Invalidation
         run: |
